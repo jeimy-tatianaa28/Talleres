@@ -1,6 +1,8 @@
 
 #include <iostream>
+#include <cstdio>
 using namespace std;
+
 int main()
 {
     cout<<"Ingrese los valores con punto para indicar decimal. ej: 5.6"<<endl;
