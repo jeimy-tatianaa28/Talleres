@@ -1,7 +1,7 @@
 //Suma ajustada a la derecha con numeros decimales
 
 #include <iostream>
-#include <cstdio>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -15,13 +15,19 @@ int main()
     cin>>num2;
     
     suma = num1 + num2;                        //los \n hacen que el resultado en la consola no se vea desorganizado
-    
+
     cout<<"\nEl resultado de la suma es:\n"<<endl;
     
-    printf("%10.2f\n", num1);
-    printf("%10.2f\n", num2);
-    printf("    -------\n");
-    printf("%10.2f\n", suma);
+    // 'fixed' fuerza la notación decimal fija
+    // 'setprecision(2)' establece 2 decimales
+    
+    cout<< fixed << setprecision (2);
+    
+    // 'setw(10)' ajusta el ancho de campo a 10 caracteres (alineado a la derecha)
+    cout << setw(10) << num1 << "\n";
+    cout << setw(10) << num2 << "\n";
+    cout << setw(10) << "-------" << "\n";
+    cout << setw(10) << suma << "\n";
 
     return 0;
 }
