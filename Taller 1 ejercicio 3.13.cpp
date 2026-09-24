@@ -1,7 +1,7 @@
 //Visualizacion de valores
 
 #include <iostream>
-#include <cstdio>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -10,17 +10,18 @@ int main()
 
 	double numero = 7.123456;
 
-	cout<<"Visualizacion de valores escalonados: \n"<<endl;
+	cout << "Visualizacion de valores escalonados: \n" << endl;
 	
-	//Aqui la consola muestra los decimales que %. le indique, aunque el problema es que los aproxima
-	
-	printf("%.1f\n", numero);
-	printf("%.2f\n", numero);
-	printf("%.3f\n", numero);
-	printf("%.4f\n", numero);
-	printf("%.5f\n", numero);
-	printf("%.6f\n", numero);
-	
+	// 'fixed' asegura que la precisión aplique únicamente a los dígitos decimales
+	cout << fixed;
 
+	// Aqui la consola muestra los decimales que setprecision() le indique
+	cout << setprecision(1) << numero << "\n";
+	cout << setprecision(2) << numero << "\n";
+	cout << setprecision(3) << numero << "\n";
+	cout << setprecision(4) << numero << "\n";
+	cout << setprecision(5) << numero << "\n";
+	cout << setprecision(6) << numero << "\n";
+	
 	return 0;
 }
