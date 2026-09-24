@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include <cstdio>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -14,12 +14,7 @@ int main()
     
     superficie = (longitud * ancho);
     
-    // Utilizo %.4f\n para formatear la salida:
-   // %  = es aquel que indica dónde va la variable
-  // .4 = fuerza al programa a mostrar exactamente 4 decimales
- // f  = indica que el tipo de dato es decimal
-    
-    printf("La superficie es: %.4f\n", superficie);
+    cout<< setprecision (4) << superficie;
     
     return 0;
 
